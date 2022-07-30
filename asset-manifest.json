@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crud-app-redux-toolkit/static/css/main.d155dbd4.css",
+    "main.js": "/crud-app-redux-toolkit/static/js/main.4d0f94ea.js",
+    "index.html": "/crud-app-redux-toolkit/index.html",
+    "main.d155dbd4.css.map": "/crud-app-redux-toolkit/static/css/main.d155dbd4.css.map",
+    "main.4d0f94ea.js.map": "/crud-app-redux-toolkit/static/js/main.4d0f94ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d155dbd4.css",
+    "static/js/main.4d0f94ea.js"
+  ]
+}

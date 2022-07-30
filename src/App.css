@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --main-color: #0075ff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Courier New", Courier, monospace;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.crud-app {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 7px;
+  background-color: #fbfbfb;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.crud-app h1 {
+  background-color: #eee;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: var(--main-color);
+  border-radius: 7px;
+  margin-top: 0;
+}
+.crud-app .content {
+  display: flex;
+  gap: 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+.crud-app .content .heading h3 {
+  margin-top: 0;
+  font-size: 22px;
+  color: var(--main-color);
+  border-bottom: 2px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #eee;
+}
+.crud-app .content form {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  width: 450px;
+}
+.crud-app .content form > * {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  outline: none;
+}
+.crud-app .content form .heading {
+  border: none;
+}
+.crud-app .content form input,
+.crud-app .content form textarea {
+  padding: 15px;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.crud-app .content form textarea {
+  height: 200px;
+}
+.crud-app .content form button {
+  padding: 10px 20px;
+  font-size: 17px;
+  margin-left: auto;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+}
+.crud-app .content .posts {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 20px;
+  overflow: auto;
+}
+.crud-app .content .posts .post {
+  background-color: #eee;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  border-right: 3.5px solid var(--main-color);
+  font-family: cursive;
+}
+.crud-app .content .posts .post .post-heading {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
+.crud-app .content .posts .post .post-number {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.crud-app .content .posts .post .post-title {
+  margin: 0;
+  font-size: 22px;
+  color: var(--main-color);
+}
+.crud-app .content .posts .post .post-content {
+  font-size: 16px;
+  margin: 15px 0;
+  line-height: 1.4;
+  background-color: #fff;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+.crud-app .content .posts .post .post-controls {
+  text-align: right;
+}
+.crud-app .content .posts .post .post-controls button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.crud-app .content .posts .post .post-controls button.edit {
+  background-color: var(--main-color);
+}
+.crud-app .content .posts .post .post-controls button.delete {
+  background-color: #e91e63;
 }
